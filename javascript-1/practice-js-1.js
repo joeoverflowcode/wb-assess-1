@@ -179,6 +179,15 @@ const bigOrSmall = (arr) => {
 
 //CODE HERE
 
+const arrayReverser = (arr) => {
+  const reversed = []
+  for (let i = arr.length-1; i >= 0; i--){
+    reversed.push(arr[i])
+  }
+  return reversed
+}
+
+
 //////////////////PROBLEM 14////////////////////
 
 let global = 'cool string';

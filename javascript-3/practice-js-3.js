@@ -3,10 +3,15 @@
 
 //CODE HERE
 
+const groceries = ["milk", "eggs", "bread"]
+console.log(groceries)
 //////////////////STEP 2////////////////////
 /* Create a variable called 'yourName' that is assigned the value of your name as a string. */
 
 //CODE HERE
+
+let yourName = "Joe"
+console.log(yourName)
 
 //////////////////STEP 3////////////////////
 /*
@@ -17,6 +22,14 @@
 */
 
 //CODE HERE
+const setGroceryListTitle = (x) => {
+    return `${x}'s Grocery List`
+}
+
+let xparam = "Jacob"
+let withTitle =setGroceryListTitle(xparam)
+console.log(withTitle)
+
 
 //////////////////STEP 4////////////////////
 /* 
@@ -28,6 +41,17 @@
 
 //CODE HERE
 
+const addItem = (item) => {
+    groceries.push(item)
+    displayData()
+}
+
+console.log(`The current items in the groceries array are: [${groceries}]`)
+
+
+// addItem("Banana")
+// console.log(`Now, the updated list is: [${groceries}]`)
+
 //////////////////STEP 5////////////////////
 /*
     Create a function called 'removeItem' that takes in one parameter called 'index'. 
@@ -37,6 +61,11 @@
 */
 
 //CODE HERE
+
+// const removeItem = (index) => {
+//     groceries.pop()
+//      displayData()
+// }
 
 //////////////////STEP 6////////////////////
 /*
@@ -50,6 +79,8 @@
 */
 
 //CODE HERE
+
+// const checkGroceryCount =
 
 //////////////////Check out your code!////////////////////
 /*
