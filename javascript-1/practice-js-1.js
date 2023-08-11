@@ -3,15 +3,19 @@
 
 //CODE HERE
 
+let myName = "Joe"
+
 //////////////////PROBLEM 2////////////////////
 /* Create a variable called 'faveNum' with a value that is your favorite number. */
 
 //CODE HERE
+let faveNum = 5
 
 //////////////////PROBLEM 3////////////////////
 /* Create a variable called 'lovesCode' and assign it a boolean value. */
 
 //CODE HERE
+let lovesCode = true
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -20,6 +24,9 @@
 */
 
 //CODE HERE
+const sum = (num1, num2) => {
+  return num1 + num2
+}
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -29,7 +36,18 @@
   If 'data' is a falsy value, return a false boolean.
 */
 
-//CODE HERE
+// //CODE HERE
+const trueOrFalse = (data) => {
+  return !!data
+}
+
+//   if (data === true) {
+//   return true
+//   }
+//     else if ( data === false) {
+//       return false
+//     }
+// }
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -41,6 +59,17 @@
 
 //CODE HERE
 
+const oddChecker = (num) => {
+  if(num % 2 === 0){
+    return 'the number is even'
+  }
+  else if(num % 2 !== 0) {
+    return 'the number is odd'
+  }
+}
+
+
+
 //////////////////PROBLEM 7////////////////////
 /*
   Create a function called 'iLove' that takes in two string parameters, 'name' and 'love'. 
@@ -50,17 +79,26 @@
 
 //CODE HERE
 
+const iLove = (str1, str2) => {
+  return `${str1} loves ${str2}`
+}
+
 //////////////////PROBLEM 8////////////////////
 /* Create a copy of the faveColors array called 'colorCopy' using the slice method. */
 
 const faveColors = ['red', 'green', 'black'];
 
 //CODE HERE
+let colorCopy = faveColors.slice()
 
+console.log(colorCopy)
 //////////////////PROBLEM 9////////////////////
 /* Add a fourth color to the end of the 'colorCopy' array using the push method. */
 
 //CODE HERE
+
+colorCopy.push('orange')
+console.log(colorCopy)
 
 //////////////////PROBLEM 10////////////////////
 /*
@@ -71,6 +109,9 @@ const faveColors = ['red', 'green', 'black'];
 const numbers = [1, 2, 3, 4, 5];
 
 //CODE HERE
+
+const middleNums = numbers.slice(1, 4)
+console.log(middleNums)
 
 //////////////////PROBLEM 11////////////////////
 /*
@@ -88,6 +129,16 @@ const numbers = [1, 2, 3, 4, 5];
 
 //CODE HERE
 
+const me = {
+  firstName: "Joe",
+  state: "Texas",
+  age: 37,
+  greeter: function(){
+    return `Hello! My name is ${this.firstName} and I live in ${this.state}`
+  }
+
+}
+
 //////////////////PROBLEM 12////////////////////
 /* 
   Create a function called 'bigOrSmall' that takes in one parameter, 'arr', 
@@ -102,6 +153,19 @@ const numbers = [1, 2, 3, 4, 5];
 */
 
 // CODE HERE
+
+const bigOrSmall = (arr) => {
+  let answers = []
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] > 100){
+      answers.push('big')
+    } else {
+      answers.push('small')
+    }
+    
+  }
+  return answers
+}
 
 //////////////////PROBLEM 13////////////////////
 /* 
