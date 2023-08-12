@@ -306,8 +306,13 @@ const carFactory = (mk, mdl, yr) => {
     year: yr
   }
 
-  if (this.year > 2018) {
+  if (yr > 2018) {
     car.isNew = true
-  } else { car.isNew = false }
+  } else if ( yr < 2018){
+    car.isNew = false 
+  }
   return car
 }
+
+carFactory("Honda", "Civic", 1996)
+
