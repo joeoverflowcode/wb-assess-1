@@ -212,16 +212,16 @@ function secondFunction() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = ['global', 'inner', 'outer', 'functional'];
+let globalScope = ['global'];
 
 //This array should contain the variable names (as strings) accessible in the firstFunction function.
-let firstFunctionScope = ['global', 'inner', 'outer', 'functional'];
+let firstFunctionScope = ['global', 'outer'];
 
 //This array should contain the variable names (as strings) accessible in the innerFunction function.
-let innerFunctionScope = ['global', 'inner', 'outer', 'functional'];
+let innerFunctionScope = ['global', 'inner', 'outer'];
 
 //This array should contain the variable names (as strings) accessible in the secondFunction function.
-let secondFunctionScope = ['global', 'inner', 'outer', 'functional'];
+let secondFunctionScope = ['global', 'functional'];
 
 //////////////////PROBLEM 15////////////////////
 /* 
@@ -230,6 +230,10 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional'];
 */
 
 //CODE HERE
+
+const firstItem = (arr, cb) => {
+  cb(arr[0])
+}
 
 //////////////////PROBLEM 16////////////////////
 /* 
@@ -241,6 +245,15 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional'];
 
 //CODE HERE
 
+const isItBob = (obj,cb) => {
+  if (obj.name === 'Bob'){
+    cb(true)
+  } else {
+    cb(false)
+  }
+  
+}
+
 //////////////////PROBLEM 17////////////////////
 /*
   Write a function called giveMeDoubles that takes in two arguments: an array of numbers and a callback.  
@@ -249,6 +262,14 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional'];
 */
 
 //CODE HERE
+
+const giveMeDoubles = (arr, cb) => {
+  arrDoubled = []
+  for (let i = 0; i < arr.length; i++){
+    arrDoubled.push(arr[i] * 2)
+  }
+  cb (arrDoubled)
+}
 
 //////////////////PROBLEM 18////////////////////
 /*
@@ -276,3 +297,17 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional'];
 */
 
 //CODE HERE
+
+const carFactory = (mk, mdl, yr) => {
+
+  const car = {
+    make: mk,
+    model: mdl,
+    year: yr
+  }
+
+  if (this.year > 2018) {
+    car.isNew = true
+  } else { car.isNew = false }
+  return car
+}
